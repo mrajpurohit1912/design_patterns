@@ -1,5 +1,28 @@
 #This Repository is a for practice of basic implementation of design patterns in python
 
+Categories of Special Methods
+Object Lifecycle:
+__new__, __init__, __del__
+
+String Representation:
+__str__, __repr__
+
+Arithmetic/Comparison:
+__add__, __sub__, __mul__, __lt__, __eq__
+
+Callable Behavior:
+__call__
+
+Containers and Iteration:
+__getitem__, __setitem__, __delitem__, __iter__, __next__, __len__
+
+Attribute Management:
+__getattr__, __setattr__, __delattr__
+
+
+
+
+
 What is design pattern?
 -> Software design pattern is a general,reusable solution to a commanly occuring problems while developting a software
 
