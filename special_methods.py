@@ -133,3 +133,65 @@
 # cl = CustomList([1, 2, 3])
 # print(cl[1])  # 2
 # print(len(cl))  # 3
+
+####################################################################################################
+
+class Archar:
+    def __init__(self,hp,mana,arrows):
+        self.hp = hp
+        self.mana = mana
+        self.arrows = arrows
+
+    # def __str__(self):
+    #     return f"Archer with hp = {self.hp} mana = {self.mana} arrows = {self.arrows}"
+    
+    def __repr__(self):
+        return f"Archer({self.hp},{self.mana},{self.arrows})"
+    
+
+    # def __add__(self,other):
+    #     if not (other,Archar):
+    #         return NotImplemented
+    #     new_hp = self.hp + other.hp
+    #     new_mana = self.mana + other.mana
+    #     new_arrows = self.arrows + other.arrows
+    #     return (new_hp,new_mana,new_arrows)
+
+    # def __hash__(self):
+    #     return 1
+
+archer1 = Archar(100,100,5)
+archer2 = Archar(100,100,5)
+#print(archer1 + archer2) 
+
+# new_dict = {archer1:"test"}
+
+class Company:
+    def __init__(self,size):
+        self.size = size
+        self.archers = []
+        self.index = 0
+
+    def add_archer(self,archer):
+        if not isinstance(archer,Archar):
+            raise TypeError("Only Archers allowed")
+        if len(self.archers) > self.size:
+            raise ValueError("Comapny already full")
+        else:
+            self.archers.append(archer)
+
+    def __add__(self,other):
+        if not isinstance(other,Archar):
+            raise TypeError("Only Archers can be added")
+        self.add_archer(other)
+        return self
+cp = Company(5)
+# cp.add_archer(archer1)
+# print(cp.archers)
+# cp.add_archer(archer2)
+# print(cp.archers)
+
+
+new_company = archer1 + cp
+print(cp.archers)
+print(new_company.archers)

@@ -1,14 +1,31 @@
 #This Repository is a for practice of basic implementation of design patterns in python
 
 Categories of Special Methods
+
+
 Object Lifecycle:
 __new__, __init__, __del__
+
+1. __new__ method is called before __init__ method while creating the instance of the object
+2. __init__ method is also called as construnctor of the class
+3. __init__ method is a instace method and it belongs to the instance of the class
+4. __init__ method is called automaticaly when u create new instance of the class
+5. __del__ method is used for deleting the instace of the class
+
 
 String Representation:
 __str__, __repr__
 
+1. __str__ and __repr__ are used for writing the name of the instance in better formatted way.if we dont use them we will simply get    "<__main__.Archar object at 0x000002390E2322D0>" and other wise we will get some decorated name of the instance like this Archer with hp = 100 mana = 100 arrows = 5 | Archer(100,100,5).
+2. if we have both in our class then __str__ will get implemented and if just have __str__ | __repr__  then either of them will be implemented.
+3. USECASE: better naming while logging. or reading the name of class.
+4. __str__ is for the user of your library and __repr__ is for the developer
+
+
+
 Arithmetic/Comparison:
 __add__, __sub__, __mul__, __lt__, __eq__
+1. These are usefull for doing arethmatic opertions with the 2 or more instances of the class
 
 Callable Behavior:
 __call__
