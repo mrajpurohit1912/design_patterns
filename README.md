@@ -1,4 +1,5 @@
 #This Repository is a for practice of basic implementation of design patterns in python
+#pls refer each design pattern main file for the explaination and implementation
 
 Categories of Special Methods
 
@@ -88,3 +89,5 @@ State: Allows an object to alter its behavior when its internal state changes.
 Template Method: Defines the skeleton of an algorithm in a method but lets subclasses override specific steps.
 Mediator: Reduces coupling between classes by introducing a mediator that handles communication.
 Iterator: Provides a way to access elements of a collection sequentially without exposing the underlying structure.
+
+

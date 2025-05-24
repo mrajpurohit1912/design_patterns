@@ -1,19 +1,6 @@
-# # def greet(*args):
-# #     # for name in args:
-# #     #     print(f'Hello world {name}')
-# #     return args
-# # tp = ('mahavir','fadfd','gwfadsf')
-# # ans = greet(tp)
-# # print(ans)
-# # print(type(ans))
+#Meaning - Singleton desgin pattern is a creational design pattern that ensues a class has only 1 instance throughout the appliacation and provide global point of access to that instance
 
-
-# def print_off(**kwargs):
-#     for key,value in kwargs.items():
-#         print(f"{key} : {value}")
-
-
-# print_off(name='Mahavir',age=85,location='Mumbai')
+#usecase - logging, DB connector, configuration settings,file system handlers,network managers
 
 # class Singlton(object):
 #     def __new__(cls,*args, **kwargs):
@@ -31,3 +18,7 @@
 # o2.data = 5
 
 # print(f"Object - 1 data ==>",o1.data)
+
+class my_dummy_class:
+    def __new__(cls):
+        pass
